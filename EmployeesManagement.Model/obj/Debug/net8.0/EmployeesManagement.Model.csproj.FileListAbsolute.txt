@@ -1,0 +1,11 @@
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\bin\Debug\net8.0\EmployeesManagement.Model.deps.json
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\bin\Debug\net8.0\EmployeesManagement.Model.dll
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\bin\Debug\net8.0\EmployeesManagement.Model.pdb
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.AssemblyInfoInputs.cache
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.AssemblyInfo.cs
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.csproj.CoreCompileInputs.cache
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.dll
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\refint\EmployeesManagement.Model.dll
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.pdb
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\ref\EmployeesManagement.Model.dll
