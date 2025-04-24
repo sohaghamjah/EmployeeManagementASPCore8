@@ -9,3 +9,4 @@ C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\E
 C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\refint\EmployeesManagement.Model.dll
 C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.pdb
 C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\ref\EmployeesManagement.Model.dll
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Model\obj\Debug\net8.0\EmployeesManagement.Model.sourcelink.json

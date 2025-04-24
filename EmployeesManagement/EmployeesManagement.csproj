@@ -19,8 +19,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
   </ItemGroup>
 
-    <ItemGroup>
-	    <ProjectReference Include="..\EmployeesManagement.Model\EmployeesManagement.Model.csproj"></ProjectReference>
-    </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeesManagement.Model\EmployeesManagement.Model.csproj" />
+  </ItemGroup>
 
 </Project>
