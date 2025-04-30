@@ -13,5 +13,16 @@ namespace EmployeesManagement.Data
         }
 
         public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<Department> Departments { get; set; }
+
+        public DbSet<Designation> Designations { get; set; }
+
+        public DbSet<Bank> Banks { get; set; }
+        public DbSet<SystemCode> SystemCodes { get; set; }
+        public DbSet<SystemCodeDetails> SystemCodeDetails { get; set; }
+        public DbSet<LeaveType> LeaveTypes { get; set; }
+
+
     }
 }
