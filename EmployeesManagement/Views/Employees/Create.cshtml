@@ -4,10 +4,15 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create Employee</h2>
-<hr />
-<div class="row">
-    <div class="col-md-12">
+<p>
+    <a asp-action="Index" class="btn btn-primary"><i class="fas fa-plus"></i> Employees</a>
+</p>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Employee List</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row">
@@ -87,7 +92,9 @@
             </div>            
         </form>
     </div>
+    <!-- /.card-body -->
 </div>
+<!-- /.card -->
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
