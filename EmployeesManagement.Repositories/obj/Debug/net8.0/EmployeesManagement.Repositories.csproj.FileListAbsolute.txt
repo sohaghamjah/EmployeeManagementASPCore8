@@ -1,0 +1,6 @@
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Repositories\obj\Debug\net8.0\EmployeesManagement.Repositories.csproj.AssemblyReference.cache
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Repositories\obj\Debug\net8.0\EmployeesManagement.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Repositories\obj\Debug\net8.0\EmployeesManagement.Repositories.AssemblyInfoInputs.cache
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Repositories\obj\Debug\net8.0\EmployeesManagement.Repositories.AssemblyInfo.cs
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Repositories\obj\Debug\net8.0\EmployeesManagement.Repositories.csproj.CoreCompileInputs.cache
+C:\Dot Net Core\EmployeesManagement\EmployeesManagement.Repositories\obj\Debug\net8.0\EmployeesManagement.Repositories.sourcelink.json

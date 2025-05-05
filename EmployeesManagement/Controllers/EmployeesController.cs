@@ -7,38 +7,35 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EmployeesManagement.Data;
 using EmployeesManagement.Model;
+using EmployeesManagement.Repositories.Interfaces;
 
 namespace EmployeesManagement.Controllers
 {
     public class EmployeesController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IEmployeeRepository _employeeRepository;
 
-        public EmployeesController(ApplicationDbContext context)
+        public EmployeesController(IEmployeeRepository employeeRepository)
         {
-            _context = context;
+            _employeeRepository = employeeRepository;
         }
 
         // GET: Employees
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Employees.ToListAsync());
+            var employees = await _employeeRepository.GetAllAsync();
+            return View(employees);
         }
 
         // GET: Employees/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
-            {
                 return NotFound();
-            }
 
             return View(employee);
         }
@@ -58,10 +55,10 @@ namespace EmployeesManagement.Controllers
         {
             employee.CreatedAt = DateTime.Now;
             employee.CreatedBy = 1;
+
             if (ModelState.IsValid)
             {
-                _context.Add(employee);
-                await _context.SaveChangesAsync();
+                await _employeeRepository.AddAsync(employee);
                 return RedirectToAction(nameof(Index));
             }
             return View(employee);
@@ -71,15 +68,12 @@ namespace EmployeesManagement.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var employee = await _context.Employees.FindAsync(id);
+            var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
-            {
                 return NotFound();
-            }
+
             return View(employee);
         }
 
@@ -88,30 +82,23 @@ namespace EmployeesManagement.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,EmployeeId,FirstName,LastName,PhoneNumber,Email,Country,DateOfBirth,Address,Department,Designation,CreatedBy,CreatedAt,UpdatedBy,UpdatedAt")] Employee employee)
+        public async Task<IActionResult> Edit(int id, Employee employee)
         {
             if (id != employee.Id)
-            {
                 return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(employee);
-                    await _context.SaveChangesAsync();
+                    await _employeeRepository.UpdateAsync(employee);
                 }
-                catch (DbUpdateConcurrencyException)
+                catch
                 {
-                    if (!EmployeeExists(employee.Id))
-                    {
+                    if (!await _employeeRepository.ExistsAsync(employee.Id))
                         return NotFound();
-                    }
                     else
-                    {
                         throw;
-                    }
                 }
                 return RedirectToAction(nameof(Index));
             }
@@ -122,16 +109,11 @@ namespace EmployeesManagement.Controllers
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var employee = await _context.Employees
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var employee = await _employeeRepository.GetByIdAsync(id.Value);
             if (employee == null)
-            {
                 return NotFound();
-            }
 
             return View(employee);
         }
@@ -141,19 +123,13 @@ namespace EmployeesManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee != null)
-            {
-                _context.Employees.Remove(employee);
-            }
-
-            await _context.SaveChangesAsync();
+            await _employeeRepository.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
 
-        private bool EmployeeExists(int id)
+        private async Task<bool> EmployeeExists(int id)
         {
-            return _context.Employees.Any(e => e.Id == id);
+            return await _employeeRepository.ExistsAsync(id);
         }
     }
 }
