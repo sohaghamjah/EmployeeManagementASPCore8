@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EmployeesManagement.Data\EmployeesManagement.Data.csproj" />
     <ProjectReference Include="..\EmployeesManagement.Model\EmployeesManagement.Model.csproj" />
   </ItemGroup>
 

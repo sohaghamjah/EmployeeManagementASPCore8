@@ -18,3 +18,4 @@ namespace EmployeesManagement.Repositories.Interfaces
         Task<bool> ExistsAsync(int id);
     }
 }
+1

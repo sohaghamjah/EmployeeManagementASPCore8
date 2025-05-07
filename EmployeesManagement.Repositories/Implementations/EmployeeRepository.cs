@@ -1,6 +1,7 @@
-﻿using EmployeesManagement.Data;
+﻿using EmployeesManagement.Model.Data;
 using EmployeesManagement.Model;
 using EmployeesManagement.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EmployeesManagement.Repositories.Implementations
 {
-    internal class EmployeeRepository : IEmployeeRepository
+    public class EmployeeRepository : IEmployeeRepository
     {
         private readonly ApplicationDbContext _context;
 

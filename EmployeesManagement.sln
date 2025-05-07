@@ -10,7 +10,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesManagement", "Empl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesManagement.Model", "EmployeesManagement.Model\EmployeesManagement.Model.csproj", "{07381088-56B3-49F7-BE1A-8EBEE2C29582}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeesManagement.Repositories", "EmployeesManagement.Repositories\EmployeesManagement.Repositories.csproj", "{725DDB3C-6ED8-445A-A618-17D7CCA6720F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeesManagement.Repositories", "EmployeesManagement.Repositories\EmployeesManagement.Repositories.csproj", "{725DDB3C-6ED8-445A-A618-17D7CCA6720F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

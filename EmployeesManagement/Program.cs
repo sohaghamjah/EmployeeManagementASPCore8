@@ -1,6 +1,8 @@
-using EmployeesManagement.Data;
+using EmployeesManagement.Repositories.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using EmployeesManagement.Repositories.Implementations;
+using EmployeesManagement.Model.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +14,13 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+// Registering the repository
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
